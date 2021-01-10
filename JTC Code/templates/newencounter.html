@@ -1,0 +1,48 @@
+<HTML>
+    <BODY bgcolor="cyan">
+    <form method="POST" action="/newencounter">
+        <center>
+
+
+            <H1>Add new encounter</H1> <br>
+	
+
+            <label for='location'>Select Location</label>
+            <select id='location' name="location">
+                {% for item in data1 %}
+                <option value="{{ item[0]}}">{{item[0]}}</option>
+                {% endfor %}
+            </select><br>
+    
+            <label for='npc'>Select NPC</label>
+            <select id='npc' name="npc">
+                {% for item in data2 %}
+                <option value="{{ item[0]}}">{{item[0]}}</option>
+                {% endfor %}
+            </select><br>
+    
+            <label for='enemy'>Select Enemy</label>
+            <select id='enemy' name="enemy">
+                {% for item in data3 %}
+                <option value="{{ item[0]}}">{{item[0]}}</option>
+                {% endfor %}
+            </select><br>
+            
+    
+            <label for='item'>Select Item</label>
+            <select id='item' name="item">
+                {% for item in data4 %}
+                <option value="{{ item[0]}}">{{item[0]}}</option>
+                {% endfor %}
+            </select><br>
+            
+            
+            </br>
+    
+            <input type = "submit" name="cancel" value="Cancel">
+            <input type = "submit" name="add" value="Add encounter">
+        
+        </center>
+    </form>
+    </BODY>
+    </HTML>

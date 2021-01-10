@@ -1,0 +1,95 @@
+<HTML>
+    <BODY bgcolor="cyan">
+    <form method="POST" action="/addchar">
+        <center>
+        <title>Journey to Cariryn: Character</title>
+        <H1>New Character</H1> <br>
+		
+        FirstName <input type = "text" name= "FirstName" /> <br>
+        LastName <input type = "text" name= "LastName" /> <br>
+        
+
+        <!---hello meerko this is a stupid way to comment-->
+        <!---remember what mark said in u4... comments == good grade -->
+        <!---I think we should probably comment-->
+        <!--likewise-->
+
+        <label for='Race'>Select Race</label>
+        <select id='Race' name="Race">
+            {% for item in data1 %}
+            <option value="{{ item[0]}}">{{item[0]}}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for='Class'>Select Class</label>
+        <select id='Class' name="Class">
+            {% for item in data2 %}
+            <option value="{{ item[0]}}">{{item[0]}}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for='Alignment'>Select Alignment</label>
+        <select id='Alignment' name="Alignment">
+            {% for item in data3 %}
+            <option value="{{ item[0]}}">{{item[0]}}</option>
+            {% endfor %}
+        </select><br>
+<label for="level">Level</label>
+        <input type ="number" id = "level" name = "level" min="0" max = "5" value="0"><br>
+
+        <label for="strength">Strength</label>
+        <input type ="number" id = "strength" name = "strength" min="0" max = "100" value="0"><br>
+
+        <label for="brawn">Brawn</label>
+        <input type ="number" id = "brawn" name = "brawn" min="0" max = "100" value="0"><br>
+
+        <label for="agility">Agility</label>
+        <input type ="number" id = "agility" name = "agility" min="0" max = "100" value="0"><br>
+
+        <label for="mettle">Mettle</label>
+        <input type ="number" id = "mettle" name = "mettle" min="0" max = "100" value="0"><br>
+
+        <label for="craft">Craft</label>
+        <input type ="number" id = "craft" name = "craft" min="0" max = "100" value="0"><br>
+        
+        <label for="insight">Insight</label>
+        <input type ="number" id = "insight" name = "insight" min="0" max = "100" value="0"><br>
+
+        <label for="wits">Wits</label>
+        <input type ="number" id = "wits" name = "wits" min="0" max = "100" value="0"><br>
+
+        <label for="resolve">Resolve</label>
+        <input type ="number" id = "resolve" name = "resolve" min="0" max = "100" value="0"><br>
+
+        <label for="life">Life</label>
+        <input type ="number" id = "life" name = "life" min="0" max = "100" value="0"><br>
+
+        <label for='Armour'>Select Armour</label>
+        <select id='Armour' name="Armour">
+            {% for item in data4 %}
+            <option value="{{ item[0]}}">{{item[0]}}</option>
+            {% endfor %}
+        </select><br>
+
+
+        <label for="Shield">Shield</label>
+        <select id="Shield" name = "Shield">
+        <option value="Y">Y</option>
+        <option value="N">N</option>
+        </select><br>
+
+        <label for="Helm">Helm</label>
+        <select id="Helm" name = "Helm">
+        <option value="Y">Y</option>
+        <option value="N">N</option>
+        </select><br>
+
+		
+		</br>
+
+        <input type = "submit" name="submit" value="Add Character">
+        <input type = "submit" name="cancel" value="Cancel">
+        </center>
+    </form>
+    </BODY>
+</HTML>

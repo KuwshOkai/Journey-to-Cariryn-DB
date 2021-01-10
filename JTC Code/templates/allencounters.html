@@ -1,0 +1,32 @@
+<HTML>
+    <BODY bgcolor="cyan">
+    <form method="POST" action="/encounter">
+        <center>
+            <H1> All Encounters </H1>  
+            <table>
+                <th>EncounterID</th>
+                <th>Location Name</th>
+                <th>NPC Name</th>
+                <th>Enemy Name</th>
+                <th>Item Name</th>
+                </tr><br>
+            {% for item in data1 %}
+                <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+                </tr> 
+            {% endfor %}
+            </table>
+
+            <br>
+    
+            <input type = "submit" name="cancel" value="Back">
+
+        
+        </center>
+    </form>
+    </BODY>
+    </HTML>

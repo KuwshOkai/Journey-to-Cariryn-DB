@@ -1,0 +1,20 @@
+<HTML>
+    <BODY bgcolor="cyan">
+    <form method="POST" action="/npcs">
+        <center>
+            <H1>View and Modify Inventory </H1> <br>
+
+            <label for='Player'>Select Player</label>
+            <select id='Player' name="Player">
+                {% for item in data %}
+                <option value="{{ item[0]}}">{{item[0]}}</option>
+                {% endfor %}
+            </select><br>
+            
+            <input type = "submit" name="cancel" value="Cancel">
+            <input type = "submit" name="submit" value="view inventory">
+        
+        </center>
+    </form>
+    </BODY>
+    </HTML>

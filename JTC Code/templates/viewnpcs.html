@@ -1,0 +1,29 @@
+<HTML>
+    <BODY bgcolor="cyan">
+    <form method="POST" action="/npcs">
+        <center>
+            
+            <H1> All NPCs </H1>  
+            <table>
+                <th>Name</th>
+                <th>Strength </th>
+                <th>Craft</th>
+                <th>Life</th>
+                </tr><br>
+            {% for item in data %}
+                <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                </tr> 
+            {% endfor %}
+            </table>
+           
+            <br>
+            <input type = "submit" name="submit" value="Cancel">
+        
+        </center>
+    </form>
+    </BODY>
+    </HTML>
